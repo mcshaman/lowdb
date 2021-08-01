@@ -24,6 +24,7 @@
   "license": "Parity-7.0.0 AND MIT WITH Patron-1.0.0",
   "author": "Typicode <typicode@gmail.com>",
   "type": "module",
+  "main": "./lib/index.js",
   "exports": "./lib/index.js",
   "types": "lib",
   "files": [
@@ -39,7 +40,7 @@
     "build": "del-cli lib && tsc",
     "prepublishOnly": "npm run build",
     "postversion": "git push && git push --tags && npm publish",
-    "prepare": "husky install"
+    "prepare": "husky install && npm run build"
   },
   "dependencies": {
     "steno": "^2.0.0"
